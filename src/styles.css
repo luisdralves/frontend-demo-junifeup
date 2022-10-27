@@ -1,0 +1,134 @@
+:root {
+  --color-grey100: #f1eded;
+  --color-grey300: #cfcfcf;
+  --color-grey400: #b6b6b6;
+  --color-grey500: #9b9b9b;
+  --color-grey600: #414040;
+  --color-grey800: #202020;
+  --color-teal50: #e5f1f1;
+  --color-teal100: #d5e6e7;
+  --color-teal200: #a2c4c4;
+  --color-teal300: #779999;
+  --color-teal400: #319597;
+  --color-teal500: #347c7e;
+  --color-teal700: #164041;
+  --color-white: #fff;
+  --color-primary: var(--color-teal400);
+
+  --transition-default: 0.35s ease;
+}
+
+body {
+  background-color: var(--color-grey100);
+  font-family: sans-serif;
+  padding: 80px 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-white);
+  cursor: pointer;
+  padding: 8px 16px;
+  outline: none;
+  text-align: center;
+  transition: var(--transition-default);
+  transition-property: background-color, opacity;
+}
+
+button:hover {
+  background-color: var(--color-teal500);
+}
+
+button:disabled,
+button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+button.spinner-button {
+  position: relative;
+}
+
+hr {
+  border-top: 1px solid var(--color-teal100);
+  border-bottom: none;
+  margin: 16px 0;
+}
+
+input,
+textarea {
+  border: 1px solid var(--color-grey300);
+  border-radius: 4px;
+  color: var(--color-grey800);
+  font-family: sans-serif;
+  padding: 8px 16px;
+  outline: none;
+  transition: border var(--transition-default);
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--color-grey500);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--color-grey600);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-grey400);
+}
+
+p {
+  margin: 0;
+}
+
+span {
+  color: var(--color-grey500);
+}
+
+.box {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  column-gap: 8px;
+}
+
+.p2 {
+  padding: 16px;
+}
+
+.m1 {
+  margin-bottom: 8px;
+}
+
+.m2 {
+  margin-bottom: 16px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.results {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100px;
+  margin-bottom: 24px;
+  position: relative;
+}

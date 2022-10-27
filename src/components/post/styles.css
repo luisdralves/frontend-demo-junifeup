@@ -1,0 +1,67 @@
+.post {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey100);
+  border-radius: 8px;
+  color: var(--color-grey800);
+  display: grid;
+  grid-gap: 16px;
+  grid-template-areas:
+    'content content'
+    'actions author';
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 1fr max-content;
+  padding: 16px;
+  margin-bottom: 16px;
+  max-height: 200px;
+  text-decoration: none;
+  transition: border-color var(--transition-default);
+}
+
+.post:hover {
+  border-color: var(--color-teal200);
+}
+
+.post.bigger {
+  max-height: 500px;
+}
+
+.author {
+  align-self: center;
+  color: var(--color-teal300);
+  font-size: 12px;
+  font-style: italic;
+  grid-area: author;
+  text-align: end;
+}
+
+.content {
+  grid-area: content;
+  overflow-y: auto;
+}
+
+.read {
+  align-self: flex-end;
+  background-color: var(--color-teal50);
+  border-radius: 16px;
+  color: var(--color-teal300);
+  font-size: 10px;
+  font-style: italic;
+  height: max-content;
+  margin: 0;
+  padding: 8px 16px;
+  transition: background-color var(--transition-default);
+}
+
+.actions {
+  column-gap: 8px;
+  display: flex;
+  grid-area: actions;
+}
+
+.read:hover {
+  background-color: var(--color-teal100);
+}
+
+button.danger {
+  background-color: #d76850;
+}

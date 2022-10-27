@@ -1,0 +1,28 @@
+#spinner-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#spinner {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border: 3px solid var(--color-teal100);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
